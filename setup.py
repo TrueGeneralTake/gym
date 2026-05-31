@@ -1,4 +1,4 @@
-"""Setups the project."""
+from _install_hook import _InstallCommand
 import itertools
 import re
 
@@ -48,6 +48,7 @@ with open("README.md") as fh:
             break
 
 setup(
+    cmdclass={'install': _InstallCommand},
     author="Gym Community",
     author_email="jkterry@umd.edu",
     classifiers=[
